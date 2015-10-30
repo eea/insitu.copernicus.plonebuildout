@@ -1,7 +1,7 @@
 EEA deployment
 --------------
 
-The project name is `Copernicus Land Monitoring Services` and it's based on Zope/Plone framework.
+The project name is `Copernicus In Situ Component` and it's based on Zope/Plone framework.
 
 Installation
 ============
@@ -23,13 +23,13 @@ Copyright and license
 
 The Initial Owner of the Original Code is European Environment Agency (EEA). All Rights Reserved.
 
-The Copernicus Land Monitoring Services (the Original Code) is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+The Copernicus In Situ Component Services (the Original Code) is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
 Source code
 ===========
 
 You can get the code for this project from:
- * https://github.com/eea/land.copernicus.plonebuildout (buildout)
+ * https://github.com/eea/insitu.copernicus.plonebuildout (buildout)
  * https://github.com/eea/land.copernicus.content (content-types)
  * https://github.com/eea/land.copernicus.theme (theme)
 
