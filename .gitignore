@@ -1,0 +1,15 @@
+.current_revision
+.installed.cfg
+.mr.developer.cfg
+_eggmonkey.cache
+bin/
+bootstrap.py
+bootstrap.sh
+develop-eggs/
+eggs/
+include/
+lib/
+local/
+parts/
+src/
+updates.sh
