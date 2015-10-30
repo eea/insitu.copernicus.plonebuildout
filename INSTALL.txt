@@ -1,5 +1,5 @@
 ==================================================
-Plone 4 buildout for http://land.copernicus.eu
+Plone 4 buildout for http://insitu.copernicus.eu
 ==================================================
 
 .. contents ::
@@ -95,8 +95,8 @@ Run buildout for development
 The first time you want to use this buildout you first have to get
 all software from subversion and then run a few commands::
 
-   $ git clone git@github.com:eea/land.copernicus.plonebuildout.git
-   $ cd land.copernicus.plonebuildout
+   $ git clone git@github.com:eea/insitu.copernicus.plonebuildout.git
+   $ cd insitu.copernicus.plonebuildout
    $ ./install.sh
    $ ./bin/buildout -c development.cfg
 
@@ -104,7 +104,7 @@ This first three steps only have to be done the first time you use this
 buildout. When you later want to update the site because people have committed
 changes you do::
 
-   $ cd land.copernicus.plonebuildout
+   $ cd insitu.copernicus.plonebuildout
    $ git pull -u
    $ ./bin/develop rb
 
@@ -126,7 +126,7 @@ Run buildout for production (deployment)
 Some preliminary preparations must be done by system administrators on the deployment server:
 
 * a user and user group called 'zope' should be created having neccesary rights
-* the project folder must be created under /var/local/land.copernicus.plonebuildout with group owner zope and 2775 (rwxrwxr-x) mode
+* the project folder must be created under /var/local/insitu.copernicus.plonebuildout with group owner zope and 2775 (rwxrwxr-x) mode
 * add under /etc/profile:
 
 ::
@@ -139,8 +139,8 @@ The first time you want to use the copernicus plonebuildout you have to run a
 few commands (as user zope)::
 
 $ cd /var/local
-$ git clone git@github.com:eea/land.copernicus.plonebuildout.git
-$ cd land.copernicus.plonebuildout
+$ git clone git@github.com:eea/insitu.copernicus.plonebuildout.git
+$ cd insitu.copernicus.plonebuildout
 $ ./install.sh
 $ ./bin/buildout -c deployment.cfg
 $ chmod -R g+rw .
@@ -172,31 +172,31 @@ $ sudo scl enable python27 -- ./bin/www2 start
 $ sudo scl enable python27 -- ./bin/poundctl start
 
 In order to avoid this, it is recommended that you use the restart-portal init script generated in 
-/etc/init.d the script from /var/local/land.copernicus.plonebuildout/etc/rc.d/restart-portal. The script will automatically
+/etc/init.d the script from /var/local/insitu.copernicus.plonebuildout/etc/rc.d/restart-portal. The script will automatically
 use the Software Collection python 2.7 if there is no system python 2.7 without any other user intervention.
 
 For the application stack to be restarted when server reboot, the system
 administrator should add under /etc/init.d the script from
-/var/local/land.copernicus.plonebuildout/etc/rc.d/restart-portal, e.g.::
+/var/local/insitu.copernicus.plonebuildout/etc/rc.d/restart-portal, e.g.::
 
-$ cd /var/local/land.copernicus.plonebuildout/etc/rc.d
+$ cd /var/local/insitu.copernicus.plonebuildout/etc/rc.d
 $ ln -s `pwd`/restart-portal /etc/init.d/restart-portal
 $ chkconfig --add restart-portal
 $ service restart-portal start
 
 Apache configuration file should be symlinked from
-/var/local/land.copernicus.plonebuildout/etc/apache-vh.conf under
+/var/local/insitu.copernicus.plonebuildout/etc/apache-vh.conf under
 /etc/httpd/conf.d, this operation should be done by system
 administrators, e.g.::
 
-$ ln -s /var/local/land.copernicus.plonebuildout/etc/apache-vh.conf /etc/httpd/conf.d/land-copernicus-apache-vh.conf
+$ ln -s /var/local/insitu.copernicus.plonebuildout/etc/apache-vh.conf /etc/httpd/conf.d/insitu-copernicus-apache-vh.conf
 
 Run buildout for staging 
 ----------------------------
 Some preliminary preparations must be done by system administrators on the staging server:
 
 * a user and user group called 'zope' should be created having neccesary rights
-* the project folder must be created under /var/local/land.copernicus.plonebuildout with group owner zope and 2775 (rwxrwxr-x) mode
+* the project folder must be created under /var/local/insitu.copernicus.plonebuildout with group owner zope and 2775 (rwxrwxr-x) mode
 * add under /etc/profile:
 
 ::
@@ -210,7 +210,7 @@ few commands (as user zope)::
 The first time you want to use this buildout you first have to get
 all software from subversion and then run a few commands::
 
-   $ git clone git@github.com:eea/land.copernicus.plonebuildout.git staging
+   $ git clone git@github.com:eea/insitu.copernicus.plonebuildout.git staging
    $ cd staging
    $ ./install.sh
    $ ./bin/buildout -c staging.cfg
@@ -287,7 +287,7 @@ Packing is a vital regular maintenance procedure The Plone database does not aut
 
 Data.fs should be packed daily via a cron job::
 
- 01 2 * * * /var/local/land.copernicus.plonebuildout/bin/zeopack
+ 01 2 * * * /var/local/insitu.copernicus.plonebuildout/bin/zeopack
 
 Synchronisation database
 ~~~~~~~~~~~~~~~~~~~~~~~~
