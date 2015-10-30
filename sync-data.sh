@@ -1,6 +1,6 @@
 #-----------------GLOBAL VARIABLES 
-PRODUCTION_DIR="/var/local/copernicus/land.copernicus.plonebuildout"
-STAGING_DIR="/var/local/copernicus/staging/land.copernicus.plonebuildout"
+PRODUCTION_DIR="/var/local/copernicus/insitu.copernicus.plonebuildout"
+STAGING_DIR="/var/local/copernicus/insitu-staging/insitu.copernicus.plonebuildout"
 #----------------------------
 
 #----------------GENERAL FUNCTIONS
