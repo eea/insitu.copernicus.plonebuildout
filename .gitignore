@@ -16,4 +16,5 @@ updates.sh
 var/
 lib64
 updates.sh.tmp
-
+etc/apache-vh.conf
+etc/rc.d/
