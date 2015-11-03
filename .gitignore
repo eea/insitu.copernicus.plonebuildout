@@ -15,4 +15,5 @@ src/
 updates.sh
 var/
 lib64
+updates.sh.tmp
 
