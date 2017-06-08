@@ -18,3 +18,5 @@ lib64
 updates.sh.tmp
 etc/apache-vh.conf
 etc/rc.d/
+get-pip.py
+pip-selfcheck.json
